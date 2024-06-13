@@ -5,7 +5,7 @@
   "main": "backend/server.js", 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js" 
+    "start": "nodemon backend/server.js" 
   },
   "keywords": [],
   "author": "",
@@ -25,7 +25,7 @@
       { "src": "backend/server.js", "use": "@vercel/node" }
     ],
     "routes": [
-      { "src": "/backend", "dest": "server.js" }
+      { "src": "/(.*)", "dest": "backend/server.js" }
     ]
   }
 }
