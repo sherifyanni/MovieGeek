@@ -20,9 +20,10 @@
     "mongodb": "^6.7.0",
     "mongoose": "^8.4.1"
   },
-  "vercel": {
-    "builds": [
-      { "src": "backend/server.js", "use": "@vercel/node" }
-    ]
-  }
+  "builds": [
+    { "src": "backend/server.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "backend/server.js" }
+  ]
 }
