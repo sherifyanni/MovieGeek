@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.json())
 app.get("/", (req,res)=>{
-    res.sendFile(__dirname+"index.html")
+    res.send("HELLO WORLD")
 })
 
 app.use("/api", router)
