@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 // Catch all other routes and return the React index file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../../frontend/build', 'index.html'));
 });
 
 
