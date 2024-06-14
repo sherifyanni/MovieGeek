@@ -9,13 +9,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.json())
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.use(express.static(path.join(__dirname, '../backend/server.js')));
 
 // API routes or other backend logic can go here
 
 // Catch all other routes and return the React index file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../frontend/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '/backend', 'server.js'));
 });
 
 
