@@ -8,9 +8,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.use(express.json())
-app.get("/", (req,res)=>{
-    res.sendFile(__dirname+"../../frontend/App.js")
-})
+app.use(express.static(path.join(__dirname, '../frontend/src/App.js')));
+
+// Define API routes or other backend logic here if needed
+
+// Handle React routing, return all requests to React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/src', 'App.js'));
+});
+
 
 app.use("/api", router)
 
