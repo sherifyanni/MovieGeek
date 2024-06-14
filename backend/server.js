@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, '../backend/server.js')));
 
 // Catch all other routes and return the React index file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/backend', 'server.js'));
+  res.sendFile(path.join(__dirname+ '/server.js'));
 });
 
 
