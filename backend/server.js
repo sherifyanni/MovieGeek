@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, '../frontend/src/App.js')));
 
 // Handle React routing, return all requests to React app
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/src', 'App.js'));
+  res.sendFile(path.join(__dirname, '../frontend/src/App.js', 'App.js'));
 });
 
 
